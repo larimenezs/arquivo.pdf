@@ -16,3 +16,12 @@ for num in num_paginas:
     
 with Path(f"Consolidado.pdf").open(mode="wb") as arquivo:
     novo_arquivo.write(arquivo) #salva
+
+#Extra: Para adicionar todas as páginas de 2 pdfs
+"""pdf_mesclado = pyf.PdfMerger()
+
+pdf_mesclado.append("MGLU_ER_3T20_POR.pdf")
+pdf_mesclado.append("MGLU_ER_4T20_POR.pdf")
+
+with Path(f"Mesclado.pdf").open(mode="wb") as arquivo:
+    pdf_mesclado.write(arquivo)"""
