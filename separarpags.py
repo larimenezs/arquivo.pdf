@@ -1,3 +1,8 @@
+"""1º Objetivo: Queremos conseguir separar apenas o DRE do Release de 
+Resultados (Página 14) para enviar para a Diretoria, como fazemos?
+
+    - Separar as páginas de um pdf"""
+
 import PyPDF2 as pyf
 from pathlib import Path
 

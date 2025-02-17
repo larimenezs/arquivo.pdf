@@ -6,12 +6,12 @@
 import PyPDF2 as pyf
 from pathlib import Path
 
-num_paginas = [1, 14, 16]
+num_paginas = [1, 14, 16] #Define uma lista com os números das págs que deseja combinar
 
-novo_arquivo = pyf.PdfWriter()
+novo_arquivo = pyf.PdfWriter() #cria um novo arquivo pdf para colocar as 3 págs adicionadas
 for num in num_paginas:
-    pagina_pdf = pyf.PdfReader(f"paginas/Arquivo Pagina {num}.pdf") #cria um novo pdf
-    novo_arquivo.add_page(pagina_pdf.pages[0]) #add esta pág em outro arquivo pdf
+    pagina_pdf = pyf.PdfReader(f"paginas/Arquivo Pagina {num}.pdf") #Lê o arquivo PDF correspondente à página desejada
+    novo_arquivo.add_page(pagina_pdf.pages[0]) #add pág no novo arquivo pdf
 
     
 with Path(f"Consolidado.pdf").open(mode="wb") as arquivo:
